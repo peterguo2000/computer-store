@@ -5,7 +5,7 @@ npm run test
 # test coverage report
 ./coverage/index.html
 # start
-npm run strt
+npm run start
 # test file
 ./test/Checkout.test.ts
 
