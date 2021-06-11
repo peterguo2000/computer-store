@@ -9,7 +9,7 @@ const atvPricingRule = new PricingRule('atv',
     const packageCount = Math.floor(itemCount / packageSize)
     const normalCount = itemCount % packageSize
 
-    console.log('packageCount: ' + packageCount + 'normalCount:  ' + normalCount)
+    console.log('packageCount: ' + packageCount + ' normalCount:  ' + normalCount)
 
     const packagePrice = packageCount * (packageSize - 1) * price
     return packagePrice + normalCount * price
