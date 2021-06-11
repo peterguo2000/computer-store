@@ -10,4 +10,4 @@ npm run strt
 ./test/Checkout.test.ts
 
 # Note
-As jest serves the purpose for testing, no command line interace is added.
+As jest serves the purpose for testing, no command line interface is added.
