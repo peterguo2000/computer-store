@@ -8,6 +8,8 @@ npm run test
 npm run start
 # test file
 ./test/Checkout.test.ts
+# run example
+./index.ts
 
 # Note
 As jest serves the purpose for testing, no command line interface is added.
