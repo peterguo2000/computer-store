@@ -1,0 +1,22 @@
+{
+  "name": "computer-store",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "start": "node lib/index.js",
+    "test": "jest"
+  },
+  "engines": {
+    "node": "14"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.8.0"
+  }
+}

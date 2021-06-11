@@ -1,0 +1,32 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "**/*.html",
+      "**/*.less",
+      "**/*.css",
+      "**/*.js",
+      "**/*.json"
+    ]
+  },
+  "jsRules": {},
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "semicolon": [true, "never"],
+    "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+    "member-access": [true, "no-public"],
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
+    "no-empty-interface": false,
+    "arrow-parens": false,
+    "max-classes-per-file": false,
+    "curly": false,
+    "indent": [true, "spaces", 4],
+    "forin": false,
+    "no-console": false
+  },
+  "rulesDirectory": []
+}
