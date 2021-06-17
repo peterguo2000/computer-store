@@ -2,6 +2,11 @@ import Item from './Item'
 export interface Accumulator {
     total: number
     leftItems: Item[]
+    context: Context
 }
 
-export type ItemTotalFunction = (itemCount: number) => number
+interface Context {
+    items: Item[] 
+}
+
+export type ItemTotalFunction = (itemCount: number, context: Context) => number

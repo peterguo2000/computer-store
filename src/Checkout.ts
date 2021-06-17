@@ -22,17 +22,16 @@ export default class Checkout {
             const itemCount = accumulator.leftItems
                 .filter(item => item.sku === pricingRule.sku).length;
             return {
-                total: accumulator.total + pricingRule.getItemTotal(itemCount),
-                leftItems: accumulator.leftItems.filter(item => item.sku !== pricingRule.sku)
+                total: accumulator.total + pricingRule.getItemTotal(itemCount, accumulator.context),
+                leftItems: accumulator.leftItems.filter(item => item.sku !== pricingRule.sku),
+                context: accumulator.context
             }
         }
 
         //calculate skus with pricing rules
         const result = this.pricingRules
-            .reduce(reducer, { total: 0.0, leftItems: this.items });
+            .reduce(reducer, { total: 0.0, leftItems: this.items, context: { items: this.items } });
 
-        //calculate skus without pricing rules
-        return result.leftItems
-            .reduce((total: number, item) => total + item.price, result.total);
+        return result.total
     }
 }

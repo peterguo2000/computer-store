@@ -1,29 +1,6 @@
 import Checkout from './Checkout'
 import Item from './Item'
-import PricingRule from './pricingRule'
-
-const atvPricingRule = new PricingRule('atv',
-  (itemCount: number) => {
-    const packageSize = 3
-    const price = 109.50
-    const packageCount = Math.floor(itemCount / packageSize)
-    const normalCount = itemCount % packageSize
-
-    console.log('packageCount: ' + packageCount + ' normalCount:  ' + normalCount)
-
-    const packagePrice = packageCount * (packageSize - 1) * price
-    return packagePrice + normalCount * price
-  })
-
-const ipdPricingRule = new PricingRule('ipd',
-  (itemCount: number) => {
-    const packageSize = 4
-    const price = 549.99
-    const bargainPrice = 499.99
-    return itemCount > packageSize ? itemCount * bargainPrice : itemCount * price
-  })
-
-const pricingRules = [atvPricingRule, ipdPricingRule]
+import pricingRules from './PricingRules'
 
 const item1 = new Item('ipd', 'Super iPad', 549.99)
 //const item2 = new Item('mbp', 'MacBook Pro', 1399.99)
